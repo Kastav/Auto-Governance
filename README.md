@@ -1,33 +1,28 @@
 <html>
 <head>
-  <title>AutoGov Assistant</title>
+  <title>AutoGov AI 🇮🇳</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Auto-Governance 🇮🇳</h2>
+<div class="container">
+  <h1>AutoGov AI 🇮🇳</h1>
 
-<label>Enter Your Age:</label>
-<input type="number" id="age">
-<button onclick="check()">Check</button>
+  <input type="text" id="name" placeholder="Enter your name">
+  <input type="number" id="age" placeholder="Enter your age">
+  <input type="text" id="state" placeholder="Enter your state">
 
-<p id="result"></p>
+  <button onclick="generate()">Check Eligibility</button>
 
-<script>
-function check() {
-  let age = document.getElementById("age").value;
-  let result = "";
+  <button onclick="askAI()">🤖 Ask AI</button>
 
-  if (age >= 18) {
-    result = "You are eligible for:\n- PAN Card\n- Voter ID\n- Bank Account";
-  } else if (age >= 16) {
-    result = "You can apply for:\n- Learning Driving License";
-  } else {
-    result = "Currently no major documents required.";
-  }
+  <div id="output"></div>
 
-  document.getElementById("result").innerText = result;
-}
-</script>
+  <h4>🔐 Privacy Notice</h4>
+  <p>We do not store any personal data. All inputs are user-controlled.</p>
 
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
